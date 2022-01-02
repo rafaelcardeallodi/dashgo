@@ -1,36 +1,42 @@
 import { Button, Flex, Stack } from '@chakra-ui/react'
+import Head from 'next/head'
 import { Input } from '../components/Form/Input'
 
 export default function SignIn() {
   return (
-    <Flex
-      w="100vw"
-      h="100vh"
-      align="center"
-      justify="center"
-    >
+    <>
+      <Head>
+        <title>Login | dashgo.</title>
+      </Head>
       <Flex
-        as="form"
-        width="100%"
-        maxWidth={360}
-        bg="gray.800"
-        p="8"
-        borderRadius={8}
-        flexDir="column"
+        w="100vw"
+        h="100vh"
+        align="center"
+        justify="center"
       >
-        <Stack spacing="4">
-          <Input name="email" label="E-mail" type="email" />
-          <Input name="password" label="Senha" type="password" />
-        </Stack>
-        <Button
-          type="submit"
-          mt="6"
-          colorScheme="pink"
-          size="lg"
+        <Flex
+          as="form"
+          width="100%"
+          maxWidth={360}
+          bg="gray.800"
+          p="8"
+          borderRadius={8}
+          flexDir="column"
         >
-          Entrar
-        </Button>
+          <Stack spacing="4">
+            <Input name="email" label="E-mail" type="email" />
+            <Input name="password" label="Senha" type="password" />
+          </Stack>
+          <Button
+            type="submit"
+            mt="6"
+            colorScheme="pink"
+            size="lg"
+          >
+            Entrar
+          </Button>
+        </Flex>
       </Flex>
-    </Flex>
+    </>
   )
 }
