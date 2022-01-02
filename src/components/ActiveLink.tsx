@@ -23,7 +23,6 @@ export function ActiveLink({
     isActive = true;
   }
 
-
   return (
     <Link {...rest}>
       {cloneElement(children, {
